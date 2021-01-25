@@ -1,0 +1,6 @@
+https://code.visualstudio.com/docs/cpp/config-mingw
+
+Files:
+-tasks.json (build instructions)
+-launch.json (debugger settings)
+-c_cpp_properties.json (compiler path and IntelliSense settings)
