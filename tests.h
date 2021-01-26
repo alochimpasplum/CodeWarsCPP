@@ -1,5 +1,6 @@
 #include <string>
 #include <limits>
+#include <sstream>
 
 using namespace std;
 
@@ -19,4 +20,16 @@ void test_numeric_limits(){
     cout << "Max value for a double: " << std::numeric_limits<double>::max() << endl; // 1.79769e+308
     cout << "Min value for a char: " << (int)std::numeric_limits<char>::min() << endl; // -128
     cout << "Max value for a char: " << (int)std::numeric_limits<char>::max() << endl; // 127
+}
+
+void test_stringstream(string str){
+    /*
+    * Un stringstream es como un stringbuffer, pero sin operación IO. Este ejemplo acepta integers dentro del string "str"
+    * Separa la cadena que se le pasa empleando espacios, tabulaciones y saltos de línea
+    * OJO! hay que incluir <sstream>
+    */
+    stringstream ss(str);
+    int temp;
+    while (ss >> temp)
+        cout << temp << endl;
 }

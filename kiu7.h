@@ -1,6 +1,8 @@
 #include <string>
 #include <limits>
+#include <sstream>
 
+using namespace std;
 
 std::string highAndLow(const std::string& numbers){
     /*
@@ -11,6 +13,14 @@ std::string highAndLow(const std::string& numbers){
     * highAndLow("1 9 3 4 -5"); // return "9 -5"
     * https://www.codewars.com/kata/554b4ac871d6813a03000035/train/cpp
     */
+   stringstream ss(numbers);
+   int temp, min = std::numeric_limits<int>::max(), max = std::numeric_limits<int>::min();
+   while(ss >> temp){
+        if (temp < min)
+            min = temp;
+        if (temp > max)
+            max = temp;
+   }
 
-   return "test";
+   return to_string(max) + " " + to_string(min);
 }
