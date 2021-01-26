@@ -1,10 +1,12 @@
-#include "kiu8.h"
+#include <string>
+#include <iostream>
+#include "tests.h"
+#include "kiu7.h"
 
 using namespace std;
 
 int main()
 {
-    countPositivesSumNegatives({1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15});
-    
+    test_numeric_limits();
     return 0;
 }
