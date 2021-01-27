@@ -64,3 +64,52 @@ char getGrade(int a, int b, int c) {
     // Better solution:
     // return score >= 90 ? 'A' : score >= 80 ? 'B' : score >= 70 ? 'C' : score >= 60 ? 'D' : 'F'; 
 }
+
+bool isDivisible(int n, int x, int y) {
+  /*
+  * Create a function that checks if a number n is divisible by two numbers x AND y. All inputs are positive, non-zero digits.
+  * https://www.codewars.com/kata/5545f109004975ea66000086/train/cpp
+  */
+
+    return (n % x == 0 && n % y == 0) ? true : false;
+}
+
+int paperwork(int n, int m){
+    /*
+    * Your classmates asked you to copy some paperwork for them. You know that there are 'n' classmates and the paperwork has 'm' pages.
+    * Your task is to calculate how many blank pages do you need. If n < 0 or m < 0 return 0.
+    * Example:
+    * n= 5, m=5: 25
+    * n=-5, m=5:  0
+    * https://www.codewars.com/kata/55f9b48403f6b87a7c0000bd/train/cpp
+    */
+   return (n<0 || m<0) ? 0 : n*m;
+}
+
+int opposite(int number) 
+{
+    /*
+    * Very simple, given a number, find its opposite.
+    * https://www.codewars.com/kata/56dec885c54a926dcd001095/train/cpp
+    */
+
+   return number * -1;
+}
+
+int arrayPlusArray(std::vector<int> a, std::vector<int> b) {
+    /*
+    * I'm new to coding and now I want to get the sum of two arrays...actually the sum of all their elements. I'll appreciate for your help.
+    */
+   int sum = 0;
+   for (size_t i = 0; i < a.size(); i++)
+   {
+       sum += a[i];
+   }
+   for (size_t i = 0; i < b.size(); i++)
+   {
+       sum += b[i];
+   }
+   return sum;
+   // Better solution:
+   // return std::accumulate(a.begin(), a.end(), 0) + std::accumulate(b.begin(), b.end(), 0);
+}

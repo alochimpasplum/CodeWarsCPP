@@ -7,6 +7,6 @@ using namespace std;
 
 int main()
 {
-    test_stringstream("15 1 4 2 34 4 -15");
+     StringEndsWith("hola que tal","hola");
     return 0;
 }

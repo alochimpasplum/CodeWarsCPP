@@ -1,6 +1,7 @@
 #include <string>
 #include <limits>
 #include <sstream>
+#include <cmath>
 
 using namespace std;
 
@@ -23,4 +24,26 @@ std::string highAndLow(const std::string& numbers){
    }
 
    return to_string(max) + " " + to_string(min);
+}
+
+bool StringEndsWith(std::string const &str, std::string const &ending) {
+    /*
+    * Complete the solution so that it returns true if the first argument(string) passed in ends with the 2nd argument (also a string).
+    * solution('abc', 'bc') // returns true
+    * solution('abc', 'd') // returns false
+    * https://www.codewars.com/kata/51f2d1cafc9c0f745c00037d/train/cpp
+    */
+    
+    return std::equal(ending.rbegin(), ending.rend(), str.rbegin());
+}
+
+long long rowSumOddNumbers(unsigned n){
+  /*
+  * Given the triangle of consecutive odd numbers:
+  * Calculate the row sums of this triangle from the row index (starting at index 1) e.g.:
+  * rowSumOddNumbers(1); // 1
+  * rowSumOddNumbers(2); // 3 + 5 = 8
+  * https://www.codewars.com/kata/55fd2d567d94ac3bc9000064/train/cpp
+  */
+    return pow(n, 3);
 }
